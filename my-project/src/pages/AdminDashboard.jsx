@@ -19,7 +19,7 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 
-const ADD_PLANT_URL = "http://localhost:3000/adminrightss/addplants";
+const ADD_PLANT_URL = "https://urvan-2.onrender.com/adminrightss/addplants";
 
 function AdminDashboard() {
   const [name, setName] = useState("");

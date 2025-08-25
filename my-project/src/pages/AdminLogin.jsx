@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react';
 import axios from 'axios';
 
-const ADMIN_LOGIN_URL = 'http://localhost:3000/user/login';
+const ADMIN_LOGIN_URL = 'https://urvan-2.onrender.com/user/login';
 
 function AdminLogin() {
 

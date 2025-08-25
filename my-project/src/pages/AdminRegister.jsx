@@ -16,7 +16,7 @@ import {
 import axios from 'axios';
 
 // The API endpoint for admin registration on your backend.
-const ADMIN_REGISTER_URL = 'http://localhost:3000/user/adminRegister';
+const ADMIN_REGISTER_URL = 'https://urvan-2.onrender.com/user/adminRegister';
 
 function AdminRegister() {
   // Initialize the navigation hook
