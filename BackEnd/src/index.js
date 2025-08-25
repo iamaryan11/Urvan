@@ -14,7 +14,7 @@ dotenv.config();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://urvan-frontend.onrender.com/",
     credentials: true,
   })
 );
