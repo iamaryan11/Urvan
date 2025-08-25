@@ -12,12 +12,22 @@ const adminRight = require("./routes/adminRight");
 const aiRouter = require("./routes/chatAiRoute");
 dotenv.config();
 
-app.use(
-  cors({
-    origin: "https://urvan-frontend.onrender.com/",
-    credentials: true,
-  })
-);
+
+const allowedOrigins = [
+  'https://urvan-frontend.onrender.com', // Your old frontend URL
+  'https://urvan-final-frontend.onrender.com' // Your new frontend URL
+];
+app.use(cors({
+  origin: function (origin, callback) {
+    // Check if the request origin is in our allowed list
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
 app.use(express.json());
 app.use(cookieParser());
 
